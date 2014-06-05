@@ -19,18 +19,9 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(bodyParser());
-// app.use(express.logger('dev'));
-// app.use(express.json());
-// app.use(express.urlencoded());
 app.use(methodOverride());
-//app.use(express.methodOverride());
 app.use(cookieParser('your secret here'));
-//app.use(express.cookieParser('your secret here'));
 app.use(session());
-//app.use(express.session());
-// app.use(passport.initialize());
-// app.use(passport.session());
-// app.use(app.router);
 //app.use(require('stylus').middleware(__dirname + '/public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
