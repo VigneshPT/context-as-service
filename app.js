@@ -48,7 +48,7 @@ fs.readdirSync(__dirname+'/api').forEach(function (file) {
 });
 
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'),process.env.IP || 'localhost', function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 exports.app = app;
