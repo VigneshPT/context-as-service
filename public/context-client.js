@@ -32,7 +32,7 @@ function Context(options,callback){
 
 		$.ajax({
 			type:"post",
-			url:"https://context-as-service-c9-vigneshpt.c9.io/collect",
+			url:"/collect",
 			data:"location="+data.location,
 			success:function(data)
 			{
