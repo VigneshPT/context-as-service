@@ -30,6 +30,10 @@ if ('development' == app.get('env')) {
   app.use(errorHandler());
 }
 
+app.use(function(req,res,next){
+    res.setHeader('Access-Control-Allow-Origin', '*');
+});
+
 // dynamically include routes (Controller)
 fs.readdirSync(__dirname+'/viewControllers').forEach(function (file) {
   if(file.substr(-3) == '.js') {
@@ -37,6 +41,7 @@ fs.readdirSync(__dirname+'/viewControllers').forEach(function (file) {
       route.controller(app);
   }
 });
+
 
 //dynamically include API endpoints
 fs.readdirSync(__dirname+'/api').forEach(function (file) {
