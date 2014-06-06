@@ -11,6 +11,7 @@ module.exports.controller = function(app){
 		fs.getVenues({"ll":location},function(error,venues){
 		    if(!error){
 		        //res.json(venues);
+		        res.header("Access-Control-Allow-Origin", "*");
 		        var keywords = fsHelper.parse(venues);
 		        res.json(keywords);
 		    }else{
