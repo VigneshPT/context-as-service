@@ -1,0 +1,173 @@
+extends ./shared/layout
+
+block styles
+block content
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+        .container
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              //
+                 You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) 
+              a.navbar-brand(href='index.html') CONTEXTIFY
+            //
+               Collect the nav links, forms, and other content for toggling 
+            .collapse.navbar-collapse.navbar-ex1-collapse
+              ul.nav.navbar-nav.navbar-right
+                li
+                  a(href='about.html') About
+                li
+                  a(href='register.html') Register for API
+            //
+               /.navbar-collapse 
+          //
+             /.container 
+        #myCarousel.carousel.slide
+          //
+             Indicators 
+          ol.carousel-indicators
+            li.active(data-target='#myCarousel', data-slide-to='0')
+            li(data-target='#myCarousel', data-slide-to='1')
+            li(data-target='#myCarousel', data-slide-to='2')
+          //
+             Wrapper for slides 
+          .carousel-inner
+            .item.active
+              .fill(style='background-image: url(\'http://placehold.it/1900x1080&text=ConTextify\');')
+              .carousel-caption
+                h1 Context as a Service
+            .item
+              .fill(style='background-image: url(\'http://placehold.it/1900x1080&text=ConTextify\');')
+              .carousel-caption
+                h1 Makes your apps smarter.
+            .item
+              .fill(style='background-image: url(\'http://placehold.it/1900x1080&text=ConTextify\');')
+              .carousel-caption
+                h1 Makes your life simple.
+          //
+             Controls 
+          a.left.carousel-control(href='#myCarousel', data-slide='prev')
+            span.icon-prev
+          a.right.carousel-control(href='#myCarousel', data-slide='next')
+            span.icon-next
+        .section
+          .container
+            .row
+              .col-lg-4.col-md-4
+                h3
+                  i.fa.fa-check-circle
+                  | What is Contextify?
+                p
+                  | Contextify is a cloud based Context As A Service, takes several inputs from the user's mobile device and describes the context of the environment the user is in. For example, the service detects when the user is on-the-go based on the speed and delivers context to the consuming applications relatively.  Contextify provides an API to developers in all major platforms, which allows them to leverage the service in their application and provide valuable content.
+              .col-lg-4.col-md-4
+                h3
+                  i.fa.fa-pencil
+                  | Why Contextify?
+                p
+                  | Any application can use Contextify API as a library and can utilize the user's context based keywords for its business logic and can deliver personalized service to its users.
+              .col-lg-4.col-md-4
+                h3
+                  i.fa.fa-folder-open
+                  | How It Works?
+                p
+                  | An application needs to personalize the content it delivers to its users based on his context of the current location he is in.
+                  | It simply uses our Contextify library and calls our API.Contextify API gets several inputs such as location, audio inputs, calendar events and even the moving speed of the user and generates a set of keywords related to the context of his currrent environment and delivers it back to the application.
+            //
+               /.row 
+          //
+             /.container 
+        //
+           /.section 
+        .section-colored.text-center
+          .container
+            .row
+              .col-lg-12
+                h2 ConTextify: A library that can make any app smarter!
+                strong
+                  p Helps apps to deliver real time context based results.
+                  p A dream API for developers.
+                  strong
+                    hr
+            //
+               /.row 
+          //
+             /.container 
+        //
+           /.section-colored 
+        .section
+          .container
+            .row
+              .col-lg-12.text-center
+                h2
+                  | ConTextify can work wonders for any type of apps. And all platforms on the planet.
+                hr
+              .col-lg-4.col-md-4.col-sm-6
+                a(href='portfolio-item.html')
+                  img.img-responsive.img-home-portfolio(src='http://placehold.it/700x450')
+              .col-lg-4.col-md-4.col-sm-6
+                a(href='portfolio-item.html')
+                  img.img-responsive.img-home-portfolio(src='http://placehold.it/700x450')
+              .col-lg-4.col-md-4.col-sm-6
+                a(href='portfolio-item.html')
+                  img.img-responsive.img-home-portfolio(src='http://placehold.it/700x450')
+              .col-lg-4.col-md-4.col-sm-6
+                a(href='portfolio-item.html')
+                  img.img-responsive.img-home-portfolio(src='http://placehold.it/700x450')
+              .col-lg-4.col-md-4.col-sm-6
+                a(href='portfolio-item.html')
+                  img.img-responsive.img-home-portfolio(src='http://placehold.it/700x450')
+              .col-lg-4.col-md-4.col-sm-6
+                a(href='portfolio-item.html')
+                  img.img-responsive.img-home-portfolio(src='http://placehold.it/700x450')
+            //
+               /.row 
+          //
+             /.container 
+        //
+           /.section 
+        .section-colored
+          .container
+            .row
+              .col-lg-6.col-md-6.col-sm-6
+                h2 ConTextify Features
+                ul
+                  li RESTFUL API.
+                  li Returns Context Based Keywords.
+                  li Returns keywords in required format (JSON/XML).
+                  li Utilizes microphone inputs for accurate results.
+                  li On the Go? ConTextify tracks your speed!
+                  li Serves any application!
+                  li Highly Secured. Works only if you want it to.
+                  li Developers can now concentrate only on business logic.
+              .col-lg-6.col-md-6.col-sm-6
+                img.img-responsive(src='http://placehold.it/700x450/ffffff/cccccc')
+            //
+               /.row 
+          //
+             /.container 
+        .container
+          .row.well
+            .col-lg-8.col-md-8
+              h4 Did we impress you? 
+              p Feel free to give it a shot!
+            .col-lg-4.col-md-4
+              a.btn.btn-lg.btn-primary.pull-right(href='register.html') Signup for API
+          //
+             /.row 
+        //
+           /.container 
+        .container
+          hr
+          footer
+            .row
+              .col-lg-12
+                p Copyright © Company 2013
+        //
+           /.container 
+        //
+           JavaScript 
+        
+        script(src='./modern-business.js')

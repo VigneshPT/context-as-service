@@ -1,0 +1,21 @@
+!DOCTYPE 5
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="./context-client.js"></script>
+        <title>Test Page</title>
+        <script>
+            
+            var ct = new Context({interval:4,maxDuration:60},function(data){
+                
+            });
+            setTimeout(function(){
+                ct.destroy();
+            },20000);
+            // ct.onContextChange(function(data){
+                
+            // });
+        </script>
+    </head>
+    <body>Hello </body>
+</html>

@@ -31,6 +31,14 @@ if ('development' == app.get('env')) {
 }
 
 // dynamically include routes (Controller)
+fs.readdirSync(__dirname+'/viewControllers').forEach(function (file) {
+  if(file.substr(-3) == '.js') {
+      route = require(__dirname+'/viewControllers/' + file);
+      route.controller(app);
+  }
+});
+
+//dynamically include API endpoints
 fs.readdirSync(__dirname+'/api').forEach(function (file) {
   if(file.substr(-3) == '.js') {
       route = require(__dirname+'/api/' + file);
