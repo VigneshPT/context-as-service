@@ -7,6 +7,8 @@ module.exports.controller = function(app){
 		var speed = req.body.speed;
 		
 		console.log(location);
+		res.setHeader('Access-Control-Allow-Origin', '*');
+		
 		var fs = (require('foursquarevenues'))(config.foursquare.clientId,config.foursquare.clientSecret);
 		fs.getVenues({"ll":location},function(error,venues){
 		    if(!error){

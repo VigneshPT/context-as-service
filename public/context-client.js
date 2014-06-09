@@ -32,7 +32,7 @@ function Context(options,callback){
 
 		$.ajax({
 			type:"post",
-			url:"/collect",
+			url:"http://contextify.techowise.com/collect",
 			data:"location="+data.location,
 			success:function(data)
 			{

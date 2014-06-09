@@ -30,10 +30,6 @@ if ('development' == app.get('env')) {
   app.use(errorHandler());
 }
 
-app.use(function(req,res,next){
-    res.setHeader('Access-Control-Allow-Origin', '*');
-});
-
 // dynamically include routes (Controller)
 fs.readdirSync(__dirname+'/viewControllers').forEach(function (file) {
   if(file.substr(-3) == '.js') {
